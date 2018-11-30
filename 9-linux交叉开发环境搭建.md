@@ -56,10 +56,10 @@
 
 1. 用apt-get命令更新系统
 
-    ```shell
+   ```shell
     sudo apt-get update
     sudo apt-get upgrade
-    ```
+   ```
 
 2. 从vmware官网下载适合linux的虚拟机版本。
 
@@ -199,27 +199,27 @@ briged，NAT，host-only，我就不细说了，想了解都能找到。我主�
 
 1. NFS服务端安装与配置
 
-  * 下载安装:~$ sudo apt-get install nfs-kernel-server
-  * 安装完成后，创建NFS文件夹：~$ sudo mkdir /home/me(用户名)/nfsroot
-  * 修改NFS服务器配置：~$ sudo gedit /etc/exports
-  * 在exports最后一行写入：/home/me/nfsroot *(rw,sync,no_root_squash,no_subtree_check)
+*   下载安装:~$ sudo apt-get install nfs-kernel-server
+*   安装完成后，创建NFS文件夹：~$ sudo mkdir /home/me(用户名)/nfsroot
+    * 修改NFS服务器配置：~$ sudo gedit /etc/exports
+    * 在exports最后一行写入：/home/me/nfsroot *(rw,sync,no_root_squash,no_subtree_check)
 
-  其中：
+    其中：
 
-  * /home/nfsroot：NFS文件夹
-  * *：允许所有的网段访问，也可以使用具体的IP
-  * rw：挂载此目录的客户端对该共享目录具有可读可写权限
-  * sync：资料同步写入内存和硬盘
-  * no_root_squash：root用户具有对根目录的完全管理访问权限
-  * no_subtree_check：不检查父目录的权限
+    * /home/nfsroot：NFS文件夹
+    * *：允许所有的网段访问，也可以使用具体的IP
+    * rw：挂载此目录的客户端对该共享目录具有可读可写权限
+    * sync：资料同步写入内存和硬盘
+    * no_root_squash：root用户具有对根目录的完全管理访问权限
+    * no_subtree_check：不检查父目录的权限
 
 2. 重启服务：
-  重启rpcbind服务：```~$ sudo /etc/init.d/rpcbind restart```
-  重启nfs服务：```~$ sudo /etc/init.d/nfs-kernel-server restart ```
+   重启rpcbind服务：```~$ sudo /etc/init.d/rpcbind restart```
+   重启nfs服务：```~$ sudo /etc/init.d/nfs-kernel-server restart ```
 
 3. NFS客户端安装配置
-  NFS客户端在Ubuntu上使用~$ sudo apt-get install nfs-common 安装。ARM开发板则需要重新编译更新内核。
-  ```sudo mount -o nolock -t nfs 192.168.16.40:/home/me/nfsroot /mnt```
+   NFS客户端在Ubuntu上使用~$ sudo apt-get install nfs-common 安装。ARM开发板则需要重新编译更新内核。
+   ```sudo mount -o nolock -t nfs 192.168.16.40:/home/me/nfsroot /mnt```
 
 
 
@@ -330,6 +330,13 @@ FTP(Trivial File Transfer Protocol),即普通文件传输协议，是用来传�
 
 后面的配置,因为目标机是虚拟机的原因,暂时遇到了问题。。。
 先不管了。。
+
+##编写信息
+> **author:luosy **
+
+> **mailbox: 1195628909@qq.com**
+
+> **time:2018.6.1**
 
 
 
