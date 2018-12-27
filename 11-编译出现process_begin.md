@@ -51,8 +51,15 @@ make (e=234): 有更多数据可用。
 ## 解决方法
 
 1. 修改bsp下Makefile，删除重复或多余的头文件搜索路径
-2. 把IDE放到根目录下，减少文件路径长度
-3. 删除不必要的环境变量PATH中的路径
+
+   ```
+   CFLAGS := $(CFLAGS)  -I$(PROJECT_PATH) -I$(BSPS_PATH) -I$(PROJECT_PATH)/src  $(DEFAULT_SEARCH_PATH)
+   删除$(DEFAULT_SEARCH_PATH)
+   ```
+
+   把IDE放到根目录下，减少文件路径长度
+
+2. 删除不必要的环境变量PATH中的路径
 
 **当然，以上解决方案的最终目的都是为了减少在cmd中执行的一条命令的长度！**
 

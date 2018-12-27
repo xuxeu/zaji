@@ -22,7 +22,7 @@ DOCKER CE FOR WINDOWS是Docker官方提供的一个可以快速、便捷地在Wi
 
 win7的则较为复杂：
 
-Docker在Windows7（windows之前）系统下的安装需要使用Docker Toolbox。
+Docker在Windows7（windows7之前）系统下的安装需要使用Docker Toolbox。
 
 ### 安装Toolbox
 
